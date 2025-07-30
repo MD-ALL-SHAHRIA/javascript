@@ -1,0 +1,120 @@
+/* ====== Base Styles ====== */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ====== Wrapper (Glass effect) ====== */
+.wrapper {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  animation: pulseBorder 2s infinite ease-in-out;
+}
+
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* ====== Title ====== */
+.Ptitle {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 5px #00ffff;
+}
+
+/* ====== Icon Styling ====== */
+.rz-icon {
+  height: 50px;
+  transition: transform 0.4s ease;
+}
+
+.rz-icon:hover {
+  transform: scale(1.4) rotate(15deg);
+}
+
+/* ====== Buttons for Rock, Paper, Scissors ====== */
+.bup {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  margin: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00ffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bup:hover {
+  background: rgba(0, 255, 255, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+}
+
+/* ====== Score and Results ====== */
+.js-results {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.js-moves,
+.js-score {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #f0f0f0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* ====== Reset Button ====== */
+.reset-buton {
+  background: linear-gradient(145deg, #00ffff, #1de9b6);
+  color: black;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.reset-buton:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
